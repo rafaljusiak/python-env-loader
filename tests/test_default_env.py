@@ -1,4 +1,4 @@
-from src.python_env_loader import load_env, EnvTypes
+from src.env_loader import load_env, EnvTypes
 
 
 def test_local_is_overriding_base_env(tmp_path, env_file, env_local_file):
@@ -60,3 +60,10 @@ def test_return_mixed_list(tmp_path, env_file):
     v = env.get("MIXED_LIST")
     assert type(v) is list
     assert v == [1, "cat", 2.5]
+
+
+def test_return_single_element_list(tmp_path, env_file):
+    env = load_env(env_type=EnvTypes.DEFAULT_ENV, dir_path=tmp_path)
+    v = env.get("SINGLE_ELEMENT_LIST")
+    assert type(v) is list
+    assert v == [1]

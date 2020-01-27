@@ -38,3 +38,6 @@ BOOL_TRUE_VALUES = [
 BOOL_FALSE_VALUES = [
     "false", "False", "n",
 ]
+NULL_VALUES = [
+    "", "null", "None",
+]

@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/rafaljusiak/python-env-loader",
-    packages=setuptools.find_packages(),
+    packages=["env_loader"],
     package_dir={'': 'src'},
     classifiers=[
         "Programming Language :: Python :: 3",

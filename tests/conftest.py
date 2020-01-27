@@ -13,6 +13,7 @@ INT_LIST=5,1,2
 IP_LIST=127.0.0.1,0.0.0.0,localhost
 STRING_LIST=cat,dog,mouse,pig
 MIXED_LIST=1,cat,2.5
+SINGLE_ELEMENT_LIST=1,
     """)
     yield str(file)
 

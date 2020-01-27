@@ -1,6 +1,6 @@
 import os
 
-from src.python_env_loader.parser import DefaultEnvParser
+from .parser import DefaultEnvParser
 
 
 class EnvFile:

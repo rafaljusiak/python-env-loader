@@ -1,14 +1,14 @@
 import os
 
-from src.python_env_loader.consts import EnvTypes, HIERARCHY
-from src.python_env_loader.env_file import EnvFile
+from .consts import EnvTypes, HIERARCHY
+from .env_file import EnvFile
 
 
 def find_env_dir():
     raise NotImplementedError
 
 
-def load_env(env_type=EnvTypes.DEFAULT_ENV, dir_path=None, export_to_env=True, raise_file_not_found=False):
+def load_env(dir_path=None, env_type=EnvTypes.DEFAULT_ENV, export_to_env=True, raise_file_not_found=False):
     dir_path = dir_path or find_env_dir()
     file_hierarchy = HIERARCHY[env_type]
     env_file = EnvFile(env_type)
