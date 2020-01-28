@@ -67,3 +67,17 @@ def test_return_single_element_list(tmp_path, env_file):
     v = env.get("SINGLE_ELEMENT_LIST")
     assert type(v) is list
     assert v == [1]
+
+
+def test_return_empty_list(tmp_path, env_file):
+    env = load_env(env_type=EnvTypes.DEFAULT_ENV, dir_path=tmp_path)
+    v = env.get("EMPTY_LIST")
+    assert type(v) is list
+    assert v == []
+
+
+def test_auto_parse_false_is_not_parsing(tmp_path, env_file):
+    env = load_env(env_type=EnvTypes.DEFAULT_ENV, dir_path=tmp_path, auto_parse=False)
+    v = env.get("EMPTY_LIST")
+    assert type(v) is str
+    assert v == ","
