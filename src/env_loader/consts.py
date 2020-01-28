@@ -33,10 +33,10 @@ HIERARCHY = {
 }
 
 BOOL_TRUE_VALUES = [
-    "true", "True", "y",
+    "true", "True", "y", "yes",
 ]
 BOOL_FALSE_VALUES = [
-    "false", "False", "n",
+    "false", "False", "n", "no",
 ]
 NULL_VALUES = [
     "", "null", "None",
