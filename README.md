@@ -1,6 +1,7 @@
 # python-env-loader
 [![PyPI version](https://badge.fury.io/py/python-env-loader.svg)](https://badge.fury.io/py/python-env-loader)
 [![Coverage Status](https://coveralls.io/repos/github/rafaljusiak/python-env-loader/badge.svg?branch=master)](https://coveralls.io/github/rafaljusiak/python-env-loader?branch=master)
+[![Build Status](https://travis-ci.com/rafaljusiak/python-env-loader.svg?branch=master)](https://travis-ci.com/rafaljusiak/python-env-loader)
 
 Reads the variables from `.env` files in similar way that is used in 
 [React.js](https://create-react-app.dev/docs/adding-custom-environment-variables/#what-other-env-files-can-be-used) 
