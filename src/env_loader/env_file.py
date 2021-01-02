@@ -14,6 +14,9 @@ class EnvFile:
         v = self.vars.get(key, os.environ.get(key))
         return v if v is not None else default
 
+    def __getitem__(self, item):
+        return self.get(item)
+
     def update(self, data_dict):
         if self.auto_parse:
             data_dict = self._parse_values(data_dict)
@@ -34,6 +37,10 @@ class EnvFile:
         for k, v in data_dict.items():
             data_dict[k] = self.parser.clear_value(v)
         return data_dict
+
+    def __iter__(self):
+        for k, v in self.vars.items():
+            yield k, v
 
     def __str__(self):
         return f"({self.env_type}) env file"

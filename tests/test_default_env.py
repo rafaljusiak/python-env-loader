@@ -81,3 +81,13 @@ def test_auto_parse_false_is_not_parsing(tmp_path, env_file):
     v = env.get("EMPTY_LIST")
     assert type(v) is str
     assert v == ","
+
+
+def test_iterator(tmp_path, env_file):
+    keys = ['A', 'BOOL', 'INT', 'FLOAT', 'INT_LIST', 'IP_LIST',
+            'STRING_LIST', 'MIXED_LIST', 'SINGLE_ELEMENT_LIST',
+            'EMPTY_LIST']
+    env = load_env(env_type=EnvTypes.DEFAULT_ENV, dir_path=tmp_path)
+    for k, v in env:
+        assert k in keys
+        assert v is not None
