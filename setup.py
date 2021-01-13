@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='python-env-loader',
-    version='0.0.1',
+    version='0.0.2',
     author="Rafał Jusiak",
     author_email="kontakt@rafaljusiak.pl",
     description="Reads the variables from .env files and adds them to environment, also automatically guesses and parses to correct types in Python. ",
